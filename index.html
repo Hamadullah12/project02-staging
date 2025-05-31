@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Staging - Interior Design Studio</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Aldrich&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Flickity CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation will be inserted by JavaScript -->
+    <div id="navigation"></div>
+
+    <!-- Hero section  -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>
+          QUALITY IS NOT ONLY <br />
+          OUR STANDARD.
+        </h1>
+        <button class="btn-primary">Learn More</button>
+      </div>
+    </section>
+
+    <!-- about  Section -->
+    <section class="about">
+      <div class="container">
+        <div class="about-content">
+          <h2>
+            WE PROPOSE AND <br />
+            DISCUSS DESIGN RULES
+          </h2>
+          <p>
+            Metasurfaces are generally designed by placing scatterers in
+            periodic or pseudo-periodic grids. We propose and discuss design
+            rules for functional metasurfaces with randomly placed.
+            <br /><br />
+            Anisotropic elements that randomly sample. Quisque sit amet nisl
+            ante. Fusce lacinia non tellus id gravida. Cras neque dolor,
+            volutpat et hendrerit et.
+          </p>
+          <button class="btn-secondary">Learn More</button>
+        </div>
+        <div class="about-image">
+          <!-- <img src="./images/about-pic.jpg.webp" alt="" /> -->
+        </div>
+      </div>
+    </section>
+    <!-- project section -->
+    <section class="project-section">
+      <h6 class="subtitle">Our Works</h6>
+      <h2 class="title">Latest Projects</h2>
+
+      <div
+        class="carousel"
+        data-flickity='{ 
+          "groupCells": 1,
+       "wrapAround": true,
+       "pageDots": false,
+       "selectedAttraction": 0.01,
+       "friction": 0.5}'
+      >
+        <!-- Slide 1 -->
+        <div class="carousel-cell">
+          <img src="./images/project-1.jpg.webp" alt="" />
+          <div class="caption">
+            <small>Interiors</small>
+            <h5>Lower River Street Astoria</h5>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-cell">
+          <img src="./images/project-2.jpg.webp" alt="" />
+          <div class="caption">
+            <small>Interiors</small>
+            <h5>Lower River Street Astoria</h5>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-cell">
+          <img src="./images/project-3.jpg.webp" alt="" />
+          <div class="caption">
+            <small>Interiors</small>
+            <h5>Lower River Street Astoria</h5>
+          </div>
+        </div>
+        <!-- Slide 1 -->
+        <div class="carousel-cell">
+          <img src="./images/project-4.jpg.webp" alt="" />
+          <div class="caption">
+            <small>Interiors</small>
+            <h5>Lower River Street Astoria</h5>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-cell">
+          <img src="./images/project-2.jpg.webp" alt="" />
+          <div class="caption">
+            <small>Interiors</small>
+            <h5>Lower River Street Astoria</h5>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-cell">
+          <img src="./images/project-3.jpg.webp" alt="" />
+          <div class="caption">
+            <small>Interiors</small>
+            <h5>Lower River Street Astoria</h5>
+          </div>
+        </div>
+
+        <!-- Add more slides as needed -->
+      </div>
+    </section>
+
+    <!-- Flickity JS -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
