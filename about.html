@@ -3,15 +3,399 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome for social media icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Aldrich&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Flickity CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
     <title>About - My Website</title>
+    <link rel="stylesheet" href="/css/projects.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        color: #333;
+        background: #f8f9fa;
+      }
+
+      .about-section {
+        padding: 60px 5%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+      }
+      .about-left {
+        padding-right: 25px;
+      }
+      .about-right {
+        padding-left: 25px;
+      }
+
+      .section-subtitle {
+        color: #ff7a49;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+      }
+      .section-title {
+        font-family: "Aldrich", sans-serif;
+        font-size: 2.8rem;
+        color: #2c3e50;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        line-height: 1.1;
+      }
+      .about-description,
+      .about-text {
+        color: #7f8c8d;
+        line-height: 1.6;
+      }
+      .about-description {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+      }
+      .about-text {
+        font-size: 0.85rem;
+        margin-bottom: 40px;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+      .feature-icon {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 15px;
+      }
+
+      .feature-title {
+        font-family: "Aldrich", sans-serif;
+        font-size: 1.1rem;
+        color: #2c3e50;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+      }
+      .feature-description {
+        font-size: 0.85rem;
+        color: #7f8c8d;
+        line-height: 1.5;
+      }
+
+      @media (max-width: 968px) {
+        .about-grid {
+          grid-template-columns: 1fr;
+          gap: 60px;
+        }
+        .about-left,
+        .about-right {
+          padding: 0;
+        }
+        .section-title {
+          font-size: 2.2rem;
+        }
+      }
+      @media (max-width: 768px) {
+        .about-section {
+          padding: 60px 20px;
+        }
+        .features-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+      }
+      @media (max-width: 480px) {
+        .section-title {
+          font-size: 1.8rem;
+        }
+        .feature-title {
+          font-size: 1rem;
+        }
+      }
+    </style>
   </head>
   <body>
-   <div id="navigation"></div>
+    <!-- it is taken from main page  -->
+    <!-- Navigation will be inserted by JavaScript -->
+    <div id="navigation"></div>
 
-    <h1>About Us</h1>
-    <p>This is the about page</p>
+    <!-- Mobile Menu Toggle (add this) -->
+    <div class="mobile-menu-toggle" id="mobileMenuToggle">
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
 
+    <!-- Mobile Menu Overlay (add this) -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <div class="mobile-menu-content">
+        <ul class="mobile-nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="mobile-contact-info">
+          <span>Call us for any questions</span>
+          <div class="phone">+01 123 456 789</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="project-hero">
+      <h1>About Us</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>-</span>
+        <span>About Us</span>
+      </div>
+    </section>
+    <!-- about main section -->
+    <section class="about-section">
+      <div class="about-grid">
+        <div class="about-left">
+          <div class="section-subtitle">WHO ARE WE</div>
+          <h2 class="section-title">ABOUT US</h2>
+          <p class="about-description">
+            As you might expect of a company that began as a high-end interiors
+            contractor.
+          </p>
+        </div>
+
+        <div class="about-right">
+          <p class="about-text">
+            Metasurfaces are generally designed by placing scatterers in
+            periodic or pseudo-periodic grids. We propose and discuss design
+            rules for functional metasurfaces with randomly placed, Anisotropic
+            elements that randomly sample. Quisque sit amet nisl ante.
+          </p>
+
+          <div class="features-grid">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <img src="./images/services-5.png.webp" alt="" />
+              </div>
+              <h3 class="feature-title">OUR MISSION</h3>
+              <p class="feature-description">
+                As you might expect of a company that began as a high-end
+                interiors contractor, we pay strict attention. Anisotropic
+                elements that randomly sample.
+              </p>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <img src="./images/services-6.png.webp" alt="" />
+              </div>
+              <h3 class="feature-title">OUR VISION</h3>
+              <p class="feature-description">
+                Our commitment to exceptional quality has never wavered. To day
+                ranks as one of the most highly-regarded construction.
+                Anisotropic elements that randomly sample.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- why choose us -->
+    <section class="choose-us">
+      <div class="choose-content">
+        <h6>WHY CHOOSE US?</h6>
+        <h4>
+          OUR ABILITY TO DELIVER OUTSTANDING <br />RESULTS FOR OUR CLIENTS
+          STARTS WITH <br />OUR TEAM OF SMART.
+        </h4>
+
+        <button class="choose-btn">Contact Us</button>
+      </div>
+    </section>
+    <!-- Team section -->
+    <section class="team">
+      <div class="team-container">
+        <p class="subtitle">OUR TEAM</p>
+        <h2 class="title">MEET OUR TEAM</h2>
+        <!-- main container for card -->
+        <div class="team-cards-grid">
+          <!-- card 1 -->
+          <div class="team-card">
+            <img src="./images/team-1.jpg.webp" alt="1" />
+            <div class="team-caption">
+              <h5>Dolores Webster</h5>
+              <small>CEO & FOUNDER</small>
+            </div>
+            <!-- Appears on hover -->
+            <div class="team-overlay">
+              <h5>Dolores Webster</h5>
+              <small>CEO & Founder</small>
+              <p>
+                Vestibulum dapibus odio quam, sit amet hendrerit dui ultricies
+                consectetur. Ut viverra porta leo.
+              </p>
+              <div class="social-icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+              </div>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div class="team-card">
+            <img src="./images/team-2.jpg.webp" alt="1" />
+            <div class="team-caption">
+              <h5>Dolores Webster</h5>
+              <small>CEO & FOUNDER</small>
+            </div>
+            <!-- Appears on hover -->
+            <div class="team-overlay">
+              <h5>Dolores Webster</h5>
+              <small>CEO & Founder</small>
+              <p>
+                Vestibulum dapibus odio quam, sit amet hendrerit dui ultricies
+                consectetur. Ut viverra porta leo.
+              </p>
+              <div class="social-icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+              </div>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div class="team-card">
+            <img src="./images/team-3.jpg.webp" alt="1" />
+            <div class="team-caption">
+              <h5>Dolores Webster</h5>
+              <small>CEO & FOUNDER</small>
+            </div>
+            <!-- Appears on hover -->
+            <div class="team-overlay">
+              <h5>Dolores Webster</h5>
+              <small>CEO & Founder</small>
+              <p>
+                Vestibulum dapibus odio quam, sit amet hendrerit dui ultricies
+                consectetur. Ut viverra porta leo.
+              </p>
+              <div class="social-icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer section -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Top Section -->
+        <div class="footer-top">
+          <h2 class="footer-title">READY TO WORK WITH US?</h2>
+          <div class="email-signup">
+            <input
+              type="email"
+              class="email-input"
+              placeholder="Enter your email..."
+            />
+            <button class="email-btn">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Footer Content -->
+        <div class="footer-content">
+          <!-- Company Info -->
+          <div class="footer-section company-info">
+            <div class="logo">Staging</div>
+            <p>7176 Blue Spring Lane<br />Santa Monica, CA 90403</p>
+            <p>info.colorlib@gmail.com<br />+84 123 456 789</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+
+          <!-- Company Links -->
+          <div class="footer-section">
+            <h3>Company</h3>
+            <ul class="footer-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Our Works</a></li>
+              <li><a href="#">Career</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+          </div>
+
+          <!-- Services Links -->
+          <div class="footer-section">
+            <h3>Services</h3>
+            <ul class="footer-links">
+              <li><a href="#">Architecture</a></li>
+              <li><a href="#">Interior Design</a></li>
+              <li><a href="#">Exterior Design</a></li>
+              <li><a href="#">Planning</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="footer-section">
+            <h3>Get In Touch</h3>
+            <p style="color: #999; font-size: 14px; line-height: 1.6">
+              7176 Blue Spring Lane<br />
+              Santa Monica, CA 90403<br /><br />
+              info.colorlib@gmail.com<br />
+              +84 123 456 789
+            </p>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <div class="footer-bottom-left">
+            Copyright © 2025 All rights reserved | This template is made with ❤️
+            by <a href="#">Colorlib</a>
+          </div>
+          <div class="footer-bottom-right">
+            <a href="#">Terms of use</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Flickity JS -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
